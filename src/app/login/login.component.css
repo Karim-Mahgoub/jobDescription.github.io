@@ -1,0 +1,28 @@
+.card {
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  background-color: #f0f4f8;
+  padding: 25px;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  z-index: 1;
+  overflow: hidden;
+  border-radius: 10px;
+  border: 1.5px solid;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+.signup-link {
+  color: steelblue;
+  margin-top: 15px;
+  text-decoration: underline; /* Add underlined text */
+  cursor: pointer; /* Show pointer cursor on hover */
+}

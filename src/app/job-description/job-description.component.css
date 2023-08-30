@@ -1,0 +1,85 @@
+/* Add this class to style the select dropdown with the arrow icon */
+.custom-dropdown {
+  position: relative;
+  padding-right: 20px; /* Space for the arrow icon */
+  width: 50%;
+}
+
+.field-group {
+  display: flex;
+  gap: 10px;
+}
+
+.field-group-item {
+  flex: 1;
+  margin-bottom: 16px;
+}
+
+.field-group-item label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.field-group-item input {
+  width: 100%;
+}
+
+/* Add the caret-down icon before the option text */
+
+.dropdown-with-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,<svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'></path></svg>");
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: 17px; /* Adjust the size as needed */
+}
+.bullet-textarea {
+  border: 1px solid #ccc;
+  padding: 10px;
+  line-height: 1.5;
+  min-height: 100px;
+}
+
+.bullet-textarea li {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+.form-control.bullet-points {
+  padding-left: 30px;
+  text-indent: -15px;
+  resize: vertical;
+  overflow: auto;
+}
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px; /* Add spacing between buttons and form */
+}
+
+.spacer {
+  flex: 1; /* Takes up available space, pushing the next element to the right */
+}
+
+.back-button {
+  background-color: #0d6efd;
+  color: white; /* Set text color to white for better contrast */
+}
+.editable-wrapper {
+  border: 1px #ccc solid;
+}
+
+.label,
+.editable {
+  padding: 7px;
+}
+
+.label {
+  float: left;
+  font-weight: bold;
+  padding-bottom: 0;
+  pointer-events: none;
+}
+
+.editable {
+  min-height: 100px;
+}

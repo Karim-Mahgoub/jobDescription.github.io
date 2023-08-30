@@ -1,0 +1,115 @@
+<div class="container" *ngIf="jobDetails">
+  <div class="job-details">
+    <h2 class="job-title">{{ jobDetails.Job }}</h2>
+
+    <div class="details-section">
+      <p class="detail-label">Division:</p>
+      <p class="detail-value">{{ jobDetails.division }}</p>
+    </div>
+
+    <div class="details-section">
+      <p class="detail-label1">Section:</p>
+      <p class="detail-value">{{ jobDetails.section }}</p>
+    </div>
+    <div class="details-section">
+      <p class="detail-label2">Job-Grade:</p>
+      <p class="detail-value">{{ jobDetails.jobGrade }}</p>
+    </div>
+    <div class="details-section">
+      <p class="detail-label2">Job-Type:</p>
+      <p class="detail-value">{{ jobDetails.Job_Type }}</p>
+    </div>
+    <div class="details-section">
+      <p class="detail-label2">Job-Nature:</p>
+      <p class="detail-value">{{ jobDetails.jobNature }}</p>
+    </div>
+    <div class="details-section">
+      <p class="detail-label2">Department:</p>
+      <p class="detail-value">{{ jobDetails.department }}</p>
+    </div>
+
+    <!-- Display other sections of job details here -->
+    <div class="section jobPurpose-section">
+      <div class="item-title">
+        <i class="fas fa-circle-exclamation"></i> Purpose
+      </div>
+      <ul *ngFor="let role of jobDetails.jobPurpose.split('\n')">
+        {{
+          role
+        }}
+      </ul>
+    </div>
+    <div class="section Qualification-section">
+      <div class="item-title"><i class="fas fa-users"></i> Qualification</div>
+      <ul *ngFor="let role of jobDetails.qualification.split('\n')">
+        {{
+          role
+        }}
+      </ul>
+    </div>
+
+    <div class="requirements-section">
+      <div class="requirement-group">
+        <div class="section Experience-section">
+          <div class="item-title">
+            <i class="fas fa-briefcase"></i> Work Experience
+          </div>
+          <ul *ngFor="let role of jobDetails.workExperience.split('\n')">
+            {{
+              role
+            }}
+          </ul>
+        </div>
+        <div class="section Behavioral-section">
+          <div class="item-title">
+            <i class="fas fa-check-circle"></i> Behavioral Competencies
+          </div>
+          <ul
+            *ngFor="let role of jobDetails.behavioralCompetencies.split('\n')"
+          >
+            {{
+              role
+            }}
+          </ul>
+        </div>
+
+        <!-- Role and Responsibilities Section -->
+        <div class="section responsibilities-section">
+          <div class="item-title">
+            <i class="fas fa-critical-role"></i> Role and Responsibilities
+          </div>
+          <ul *ngFor="let role of jobDetails.roleResponsibilities.split('\n')">
+            {{
+              role
+            }}
+          </ul>
+        </div>
+
+        <!-- Reports Section -->
+        <div class="section reports-section">
+          <div class="item-title"><i class="fas fa-envelope"></i> Report</div>
+          <ul *ngFor="let report of jobDetails.reports.split('\n')">
+            <strong>Internal Reports: </strong>
+            {{
+              report
+            }}
+          </ul>
+          <ul *ngFor="let exreports of jobDetails.exreports.split('\n')">
+            <strong>External Reports: </strong>
+            {{
+              exreports
+            }}
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Back to Job List Button -->
+    <button routerLink="/job" class="btn btn-primary">Back to Job List</button>
+  </div>
+
+  <!-- Loading Message -->
+  <div class="loading-message" *ngIf="!jobDetails">
+    <p>Loading job details...</p>
+  </div>
+</div>

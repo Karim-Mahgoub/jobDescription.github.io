@@ -1,0 +1,253 @@
+/* job-list.component.css */
+.job-card {
+  width: 700px;
+  margin: 10px;
+  border-radius: 8px;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.job-card mat-card-content {
+  padding: 10px;
+}
+
+.job-card h3.fs-20 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.job-card p.fs-14 {
+  font-size: 1rem;
+  margin: 0.25rem 0;
+}
+
+/* Date Display Styles */
+.job-card .job-date {
+  position: absolute;
+  top: 10px; /* Adjust the vertical position */
+  right: 10px; /* Adjust the horizontal position */
+  background-color: #bdebbd; /* Light green color */
+  color: #333; /* Text color */
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+}
+
+/* Header Styles */
+.job-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #f7f7f7;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Applied Jobs Button Styles */
+.applied-jobs-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.applied-jobs-button:hover {
+  background-color: #0056b3;
+}
+
+/* Logout Button Styles */
+.logout-btn,
+.add-job-btn {
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+.logout-btn {
+  background-color: #dc3545;
+}
+
+.logout-btn:hover {
+  background-color: #c82333;
+}
+
+/* Add Job Button Styles */
+.add-job-btn {
+  background-color: #28a745;
+  margin-right: 5px;
+}
+
+.add-job-btn:hover {
+  background-color: #218838;
+}
+
+/* Search Input Styles */
+.search-input {
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.search-input:focus {
+  border-color: #80bdff;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+/* Button Styles */
+.mat-card-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+}
+.mat-card-actions button,
+.mat-card-actions a {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.mat-card-actions button:hover,
+.mat-card-actions a:hover {
+  background-color: #0056b3;
+}
+
+.job-container {
+  font-family: "Roboto", sans-serif;
+}
+
+.job-location .location-icon {
+  color: #666;
+  font-size: 10px;
+  margin-right: 1px;
+}
+/* job-list.component.css */
+/* job-list.component.css */
+/* ... previous styles ... */
+.job-details {
+  display: flex;
+  align-items: center;
+  margin-top: 6px;
+}
+
+.job-location,
+.job-type {
+  display: flex;
+  align-items: center;
+  background-color: #f4f4f4;
+  /*Lightgreybackgroundcolor*/
+  border: 0px solid #7c7373;
+  /*Thinborder*/
+  border-radius: 7px;
+  /*Roundedcorners*/
+  padding: 1px 4px;
+  /*Addpaddingforspacing*/
+  margin-right: 4px;
+  /*Addspacingbetweenthem*/
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 7px;
+  -ms-border-radius: 7px;
+  -o-border-radius: 7px;
+  -webkit-border-radius: 7px;
+}
+.posted-time {
+  /* Styles for the posted time */
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: rgb(94, 224, 94);
+  padding: 4px 8px;
+  font-size: 12px;
+  border-radius: 4px;
+}
+
+.location-icon svg {
+  width: 14px;
+  height: 14px;
+  fill: #01704b;
+  margin-right: 4px;
+}
+
+.job-location-text,
+.job-type-text {
+  font-size: 14px;
+  color: #333;
+}
+/* ... (other styles) ... */
+.job-description {
+  margin-top: 10px; /* Add margin to create space between job type/location and summary */
+  font-size: 14px;
+  color: #555;
+}
+/* For screens smaller than 576px (e.g., smartphones) */
+@media (max-width: 575.98px) {
+  .job-card {
+    width: 100%;
+    margin: 10px 0;
+  }
+  .applied-jobs-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 2px 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+    width: 59px;
+    height: 40px;
+    font-size: 13px;
+    -webkit-transition: background-color 0.2s ease-in-out;
+    -moz-transition: background-color 0.2s ease-in-out;
+    -ms-transition: background-color 0.2s ease-in-out;
+    -o-transition: background-color 0.2s ease-in-out;
+  }
+}
+
+/* For screens between 576px and 767.98px (e.g., landscape smartphones) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .job-card {
+    width: 100%;
+    margin: 10px 0;
+  }
+}
+
+/* For screens between 768px and 991.98px (e.g., tablets) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .job-card {
+    width: 100%;
+    margin: 10px 0;
+  }
+}
+
+/* For screens between 992px and 1199.98px (e.g., larger tablets and small laptops) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .job-card {
+    width: 48%; /* Display two cards in a row */
+    margin: 10px;
+  }
+}
+
+/* For screens 1200px and larger (e.g., laptops and desktops) */
+@media (min-width: 1200px) {
+  .job-card {
+    width: 31%; /* Display three cards in a row */
+    margin: 10px;
+  }
+}
+.mat-accent {
+  color: tomato;
+}
+.mat-primary {
+  color: steelblue;
+}

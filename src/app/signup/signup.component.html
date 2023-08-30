@@ -1,0 +1,91 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="card">
+        <div class="text-center">
+          <h1>Sign Up</h1>
+          <h6>Please Register 🎉!</h6>
+        </div>
+        <form [formGroup]="signupForm" (ngSubmit)="signUp()">
+          <div class="mb-1">
+            <label for="fullName" class="form-label">Full Name</label>
+            <input
+              formControlName="fullName"
+              type="text"
+              class="form-control"
+              id="fullName"
+            />
+            <div
+              *ngIf="
+                signupForm.get('fullName')!.invalid &&
+                (signupForm.get('fullName')!.dirty ||
+                  signupForm.get('fullName')!.touched)
+              "
+            >
+              <small class="text-danger">Full Name is required.</small>
+            </div>
+          </div>
+          <div class="mb-2">
+            <label for="mobile" class="form-label">Mobile Number</label>
+            <input
+              formControlName="mobile"
+              type="number"
+              class="form-control"
+              id="mobile"
+            />
+            <div
+              *ngIf="
+                signupForm.get('mobile')!.invalid &&
+                (signupForm.get('mobile')!.dirty ||
+                  signupForm.get('mobile')!.touched)
+              "
+            >
+              <small class="text-danger">Mobile Number is required.</small>
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Email address</label>
+            <input
+              formControlName="email"
+              type="email"
+              class="form-control"
+              id="email"
+              aria-describedby="emailHelp"
+            />
+            <div
+              *ngIf="
+                signupForm.get('email')!.invalid &&
+                (signupForm.get('email')!.dirty ||
+                  signupForm.get('email')!.touched)
+              "
+            >
+              <small class="text-danger">Email is required.</small>
+            </div>
+          </div>
+          <div class="mb-4">
+            <label for="password" class="form-label">Password</label>
+            <input
+              formControlName="password"
+              type="password"
+              class="form-control"
+              id="password"
+            />
+            <div
+              *ngIf="
+                signupForm.get('password')!.invalid &&
+                (signupForm.get('password')!.dirty ||
+                  signupForm.get('password')!.touched)
+              "
+            >
+              <small class="text-danger">Password is required.</small>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary mb-2">Sign up</button>
+        </form>
+        <a class="signup-link" routerLink="/login"
+          >Already Registered? Click to Login</a
+        >
+      </div>
+    </div>
+  </div>
+</div>

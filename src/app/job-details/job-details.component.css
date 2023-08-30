@@ -1,0 +1,87 @@
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.job-details {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  border: 0.5px solid #eee;
+  box-shadow: 10px 10px 4px rgba(0, 0, 0, 0.1);
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+.job-title {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.details-section-group {
+  display: flex;
+}
+
+.details-section {
+  flex-basis: calc(33.33% - 10px);
+  margin-right: 10px;
+}
+
+.detail-label {
+  font-weight: bold;
+}
+
+.detail-value {
+  font-size: 16px;
+}
+.detail-label,
+.detail-label1,
+.detail-label2 {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.section {
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.item-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.requirement-group {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 20px;
+}
+
+.job-title,
+.item-title,
+.detail-label,
+.detail-label1,
+.detail-label2 {
+  color: #333;
+}
+
+.btn-primary {
+  background-color: #333;
+  border-color: #333;
+  color: #fff;
+  padding: 12px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-weight: bold;
+}

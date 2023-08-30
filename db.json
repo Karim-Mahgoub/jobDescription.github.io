@@ -1,0 +1,174 @@
+{
+  "signupUsers": [
+    {
+      "fullname": "",
+      "email": "a@gmail.com",
+      "password": "A123456789a",
+      "mobile": 123456789,
+      "id": 1
+    },
+    {
+      "fullname": "",
+      "email": "jj@gmail.com",
+      "password": "J123456789j",
+      "mobile": 123456789,
+      "id": 2
+    },
+    {
+      "fullName": "abc",
+      "email": "abc@gmail.com",
+      "password": "T123456789t",
+      "mobile": 465789,
+      "id": 3
+    },
+    {
+      "fullName": "cj",
+      "email": "cc@gmail.com",
+      "password": "C123456c",
+      "mobile": 234123456,
+      "id": 4
+    },
+    {
+      "fullName": "karim",
+      "email": "k@gmail.com",
+      "password": "L123456l",
+      "mobile": 123456789,
+      "id": 5
+    },
+    {
+      "fullName": "f",
+      "email": "g@gmail.com",
+      "password": "G789456g",
+      "mobile": 852369741,
+      "id": 6
+    },
+    {
+      "fullName": "karim",
+      "email": "aaa@gmail.com",
+      "password": "Q123456q",
+      "mobile": 651651,
+      "id": 7
+    },
+    {
+      "fullName": "hhh",
+      "email": "hh@gmail.com",
+      "password": "H123456h",
+      "mobile": 12356890,
+      "id": 8
+    },
+    {
+      "fullName": "jasim",
+      "email": "qqq@gmail.com",
+      "password": "Q123456q",
+      "mobile": 55578488,
+      "id": 9
+    }
+  ],
+  "jobList": [
+    {
+      "Job": " Senior Financial Analyst",
+      "division": "Finance and Accounting",
+      "Job_Type": "Full Time",
+      "department": "Financial Planning and Analysis",
+      "section": "Budget Management",
+      "jobGrade": "Grade A",
+      "jobNature": "Office",
+      "location": "Australia",
+      "jobPurpose": "The Senior Financial Analyst will be responsible for conducting financial analysis, forecasting, and budget management activities. They will provide insights to support strategic decision-making, monitor financial performance, and collaborate with business units to ensure financial goals are met.\n\n",
+      "policiesProcesses": "• Adherence to financial reporting standards and compliance regulations.\n• Collaborate with auditors during financial audits.",
+      "roleResponsibilities": "• Develop financial models and conduct scenario analysis for business planning.\n• Prepare monthly, quarterly, and annual financial reports.\n• Collaborate with business leaders to understand financial requirements and provide recommendations.\n• Monitor budget utilization and variances, providing actionable insights.",
+      "reports": "• Collaboration with other financial analysts for data consolidation.",
+      "exreports": "• Interaction with external stakeholders during financial presentations and reporting.",
+      "qualification": "• Bachelor's degree in finance, Accounting, or related field (MBA or CPA preferred).",
+      "workExperience": "• Minimum of 4 years in financial analysis or related role.\n• Proficiency in financial modeling and data analysis tools (Excel, Tableau, etc.).\n• Experience with budgeting, forecasting, and variance analysis.",
+      "behavioralCompetencies": "• Strong analytical and problem-solving skills.\n• Excellent communication and presentation abilities.\n• Attention to detail and accuracy in financial analysis.",
+      "languageSkills": "English",
+      "posted": "28-Aug-2023",
+      "id": 1
+    },
+    {
+      "Job": "Human Resources Manager",
+      "division": "Human Resources",
+      "Job_Type": "Full Time",
+      "department": "Employee Relations",
+      "section": "HR Operations",
+      "jobGrade": "Grade B",
+      "jobNature": "Office",
+      "location": "Denmark",
+      "jobPurpose": "The Human Resources Manager will lead and oversee HR operations, ensuring effective employee relations, talent acquisition, and compliance with HR policies. They will collaborate with leadership to develop and implement HR strategies that align with business objectives.\n\n",
+      "policiesProcesses": "• Enforce company policies and ensure adherence to labor laws.\n• Maintain employee records and ensure data accuracy.",
+      "roleResponsibilities": "• Provide guidance on employee relations issues and conflict resolution.\n• Develop and execute training programs to enhance employee development.\n• Monitor HR metrics and propose improvements to enhance HR processes.\n• Manage full-cycle recruitment processes, including job postings, interviews, and onboarding.",
+      "reports": "• Regular reporting to the Director of Human Resources. • Collaboration with HR team members for coordinated HR activities.",
+      "exreports": "•Interaction with external recruiting agencies and vendors.",
+      "qualification": "• Bachelor's degree in human resources, Business Administration, or related field (HR certification preferred).",
+      "workExperience": "• Minimum of 5 years in HR management or related role.\n• Experience in recruitment, performance management, and employee engagement.\n• Familiarity with HRIS and talent management systems.",
+      "behavioralCompetencies": "• Strong leadership and interpersonal skills.\n• Excellent problem-solving and decision-making abilities.\n• Discretion and integrity in handling sensitive employee matters.",
+      "languageSkills": "English",
+      "posted": "28-Aug-2023",
+      "id": 2
+    },
+    {
+      "Job": "Content Marketing Manager",
+      "division": "Marketing and Communications",
+      "Job_Type": "FreeLance",
+      "department": "Content Strategy",
+      "section": "Content Creation",
+      "jobGrade": "Grade A",
+      "jobNature": "Remote",
+      "location": "Andorra",
+      "jobPurpose": "The Content Marketing Manager will lead content strategy and creation efforts to engage target audiences and drive brand awareness. They will oversee content production, distribution, and performance analysis across various platforms to achieve marketing goals.",
+      "policiesProcesses": "• Adhere to brand voice and content guidelines.\n• Collaborate with legal and compliance teams for content approval.",
+      "roleResponsibilities": "• Develop and execute content marketing strategies to align with business objectives.\n• Manage content calendars and coordinate content creation with internal and external teams.\n• Analyze content performance metrics and adjust strategies accordingly.\n• Stay up-to-date with industry trends to ensure relevant and engaging content.",
+      "reports": "• Regular reporting to the Director of Marketing and Communications.",
+      "exreports": "• Interaction with external creative agencies and content partners.",
+      "qualification": "• Bachelor's degree in Marketing, Communications, Journalism, or related field.",
+      "workExperience": "• Minimum of 4 years in content marketing or related role.\n• Demonstrated experience in content creation and campaign management.\n• Proficiency in content management systems and social media platforms.",
+      "behavioralCompetencies": "• Creative thinking and a strong sense of storytelling.\n• Excellent project management and organizational skills.\n• Ability to collaborate across departments and manage multiple stakeholders.",
+      "languageSkills": "English",
+      "posted": "28-Aug-2023",
+      "id": 3
+    },
+    {
+      "Job": "Environmental Health and Safety Specialist",
+      "division": "Operations and Compliance",
+      "Job_Type": "PartTime",
+      "department": "Health and Safety",
+      "section": "Environmental Compliance",
+      "jobGrade": "Grade A",
+      "jobNature": "Field",
+      "location": "Bahrain",
+      "jobPurpose": "The Environmental Health and Safety Specialist will ensure compliance with environmental regulations and implement safety protocols to create a safe and sustainable workplace. They will conduct risk assessments, provide training, and develop strategies for reducing environmental impact.",
+      "policiesProcesses": "• Enforce safety policies and ensure adherence to environmental regulations.\n• Collaborate with regulatory agencies for compliance reporting.",
+      "roleResponsibilities": "• Conduct environmental impact assessments and develop strategies for waste reduction.\n• Implement safety training programs and emergency response plans.\n• Monitor workplace safety metrics and recommend improvements.\n• Collaborate with cross-functional teams to ensure environmental and safety compliance.",
+      "reports": "• Regular reporting to the Health and Safety Manager.",
+      "exreports": "• Interaction with regulatory agencies for compliance reporting and inspections.",
+      "qualification": "• Bachelor's degree in environmental science, Occupational Health and Safety, or related field.",
+      "workExperience": "• Minimum of 3 years in environmental health and safety roles.\n• Knowledge of environmental regulations and safety standards.\n• Experience in conducting safety audits and risk assessments.",
+      "behavioralCompetencies": "• Strong attention to detail and analytical skills.\n• Effective communication and training abilities.\n• Commitment to promoting a culture of safety and sustainability.",
+      "languageSkills": "Arabic",
+      "posted": "28-Aug-2023",
+      "id": 4
+    },
+    {
+      "Job": " Sales Executive",
+      "division": " Sales and Business Development",
+      "Job_Type": "Full Time",
+      "department": " Sales Operations",
+      "section": "Client Acquisition",
+      "jobGrade": "Grade B",
+      "jobNature": "Office",
+      "location": "Ireland",
+      "jobPurpose": "The Sales Executive will be responsible for driving revenue growth by identifying and pursuing new business opportunities. They will build and maintain relationships with potential clients, present product solutions, and negotiate contracts to achieve sales targets.",
+      "policiesProcesses": "• Adhere to sales processes and reporting requirements.\n• Comply with pricing and discount policies.",
+      "roleResponsibilities": "• Identify potential clients through market research and networking.\n• Deliver compelling sales presentations to showcase product features and benefits.\n• Collaborate with cross-functional teams to ensure seamless client onboarding.\n• Maintain accurate sales records and report on sales activities.\n\n",
+      "reports": "• Regular reporting to the Sales Manager and Collaboration with sales support teams for order processing.  ",
+      "exreports": "• Interaction with potential clients and partners.",
+      "qualification": "• Bachelor's degree in business, Marketing, or related field.",
+      "workExperience": "• Minimum of 2 years in B2B sales or business development.\n• Proven record of accomplishment of meeting or exceeding sales targets.\n• Familiarity with CRM software and sales tools.",
+      "behavioralCompetencies": "• Strong communication and negotiation skills.\n• Goal-oriented with a persistent and proactive approach.\n• Adaptability to evolving market trends and client needs.",
+      "languageSkills": "English",
+      "posted": "28-Aug-2023",
+      "id": 5
+    }
+  ]
+}

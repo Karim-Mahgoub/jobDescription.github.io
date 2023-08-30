@@ -1,0 +1,49 @@
+<div class="container mt-5">
+  <div class="row" *ngIf="appliedJobArr.length > 0; else nojobsmessage">
+    <table class="table">
+      <thead>
+        <tr>
+          <th *ngFor="let key of headers">{{ key }}</th>
+          <th>Actions</th>
+          <!-- Add a new column for actions -->
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let job of appliedJobArr">
+          <ng-container *ngIf="!job.softDeleted">
+            <td>{{ job.Job }}</td>
+            <td>{{ job.location }}</td>
+            <td>{{ job.posted }}</td>
+            <td>{{ job.Job_Type }}</td>
+            <td>
+              <button class="btn btn-danger" (click)="deleteJob(job)">
+                Delete
+              </button>
+            </td>
+            <td>
+              <button
+                class="btn btn-primary"
+                (click)="openApplyReportModal(job)"
+              >
+                Apply
+              </button>
+            </td>
+            <!-- Add a delete button with click event -->
+          </ng-container>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <ng-template #nojobsmessage>
+    <div class="text-center">
+      <h3>No applied jobs available.</h3>
+    </div>
+  </ng-template>
+
+  <!-- Add the "Back to Job List" button here -->
+  <div class="text-center mt-3">
+    <button class="btn btn-primary" (click)="goBackToJobList()">
+      Back to Job List
+    </button>
+  </div>
+</div>

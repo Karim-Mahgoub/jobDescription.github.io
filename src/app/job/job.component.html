@@ -1,0 +1,108 @@
+<div class="job-container">
+  <div class="w-100 h-100 position-relative oh">
+    <div class="w-100 h-100 position-relative oh">
+      <div class="w-100 h-100 container-fluid py-3 px-5">
+        <div style="height: 50px">
+          <div
+            class="w-100 h-100 d-flex flex-row justify-content-between align-items-center job-header"
+          >
+            <div class="search-bar">
+              <input
+                class="form-control mr-sm-2 search-input"
+                type="search"
+                placeholder="Search by job"
+                aria-label="Search"
+                [(ngModel)]="query"
+                (input)="applyOrderByAndSearch()"
+              />
+            </div>
+            <button
+              class="btn btn-primary ml-3 applied-jobs-button"
+              (click)="navigateToAppliedJobs()"
+            >
+              Saved Jobs
+            </button>
+            <div class="user-actions">
+              <button
+                id="addJobBtn"
+                class="btn btn-success ml-3 add-job-btn"
+                (click)="navigateToAddJob()"
+              >
+                Add Job
+              </button>
+
+              <button
+                (click)="confirmLogout()"
+                class="btn btn-danger logout-btn"
+              >
+                Logout
+              </button>
+            </div>
+          </div>
+        </div>
+        <div style="height: calc(100% - 50px)">
+          <div class="w-100 h-100 d-flex flex-column align-items-center">
+            <mat-card
+              class="job-card wider-card"
+              *ngFor="let job of filteredJobArr"
+            >
+              <mat-card-content>
+                <h3 class="fs-20 fw600">{{ job.Job }}</h3>
+                <div class="job-details">
+                  <div class="job-location">
+                    <span class="location-icon">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        height="1em"
+                        viewBox="0 0 384 512"
+                        class="location-icon"
+                      >
+                        <path
+                          d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0z"
+                        />
+                      </svg>
+                    </span>
+                    <span class="job-location-text">{{ job.location }} </span>
+                  </div>
+                  <div class="job-type">
+                    <span class="job-type-text">{{ job.Job_Type }}</span>
+                  </div>
+                </div>
+                <p class="job-description">
+                  {{ job.jobPurpose?.substring(0, 100)
+                  }}{{ job.jobPurpose?.length > 100 ? "..." : "" }}
+                </p>
+              </mat-card-content>
+              <mat-card-actions
+                class="button-spacing"
+                fxLayout="row"
+                fxLayoutAlign="end center"
+              >
+                <div class="posted-time">
+                  {{ formatDate(job.posted) }}
+                </div>
+                <button
+                  mat-button
+                  color="primary"
+                  (click)="applyForJobFunc(job)"
+                >
+                  Save
+                </button>
+                <a mat-button color="accent" [routerLink]="['/job', job.id]">
+                  More Details
+                </a>
+              </mat-card-actions>
+            </mat-card>
+          </div>
+        </div>
+      </div>
+      <div
+        class="position-absolute w-100 h-100 container-fluid py-3 px-5 bg-white anim"
+        style="top: 0px"
+        [style.transform]="
+          showJobDetailFlag ? 'translateX(0%)' : 'translateX(100%)'
+        "
+      ></div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,295 @@
+<div class="container my-5">
+  <h2 class="mb-4 text-center">Post New Job</h2>
+  <form [formGroup]="jobForm" class="p-4">
+    <!-- Text Inputs -->
+    <div
+      *ngIf="
+        jobForm.get('Job')?.invalid &&
+        (jobForm.get('Job')?.dirty || jobForm.get('Job')?.touched)
+      "
+    >
+      <small
+        class="text-danger"
+        *ngIf="jobForm.get('Job')?.hasError('required')"
+        >Job Title is required.</small
+      >
+    </div>
+    <input
+      id="Job"
+      type="text"
+      formControlName="Job"
+      placeholder="Job Title"
+      class="form-control"
+      [class.valid]="
+        jobForm.get('Job')?.valid &&
+        (jobForm.get('Job')?.dirty || jobForm.get('Job')?.touched)
+      "
+      [class.invalid]="
+        jobForm.get('Job')?.invalid &&
+        (jobForm.get('Job')?.dirty || jobForm.get('Job')?.touched)
+      "
+    />
+    <div class="field-group">
+      <div class="field-group-item">
+        <label for="division">Division</label>
+        <input
+          type="text"
+          id="division"
+          formControlName="division"
+          class="form-control"
+        />
+      </div>
+      <div class="field-group-item">
+        <label for="department">Department</label>
+        <input
+          type="text"
+          id="department"
+          formControlName="department"
+          class="form-control"
+        />
+      </div>
+      <div class="field-group-item">
+        <label for="section">Section</label>
+        <input
+          type="text"
+          id="section"
+          formControlName="section"
+          class="form-control"
+        />
+      </div>
+    </div>
+
+    <!-- Dropdowns -->
+
+    <div class="custom-dropdown">
+      <select
+        formControlName="jobGrade"
+        class="form-control mb-3 dropdown-with-icon"
+      >
+        <option value="">Job Grade</option>
+        <option value="Grade A">Grade A</option>
+        <option value="Grade B">Grade B</option>
+        <!-- Add more options as needed -->
+      </select>
+    </div>
+
+    <div class="custom-dropdown">
+      <select
+        formControlName="jobNature"
+        class="form-control mb-3 dropdown-with-icon"
+      >
+        <option value="">Job Nature</option>
+        <option value="Office">Office</option>
+        <option value="Field">Field</option>
+        <option value="Remote">Remote</option>
+        <!-- Add more options as needed -->
+      </select>
+    </div>
+    <div
+      *ngIf="
+        isFormControlInvalid('Job_Type') && isFormControlTouched('Job_Type')
+      "
+    >
+      <small
+        class="text-danger"
+        *ngIf="isFormControlError('Job_Type', 'required')"
+        >Job Type is required.</small
+      >
+    </div>
+    <div class="custom-dropdown">
+      <select
+        formControlName="Job_Type"
+        class="form-control mb-3 dropdown-with-icon"
+        [class.valid]="isFormControlValid('Job_Type')"
+        [class.invalid]="isFormControlInvalid('Job_Type')"
+      >
+        <option value="">Job Type</option>
+        <option value="Full Time">Full-Time</option>
+        <option value="PartTime">Part-Time</option>
+        <option value="FreeLance">FreeLance</option>
+        <option value="Remote">Remote</option>
+      </select>
+    </div>
+
+    <div
+      *ngIf="
+        isFormControlInvalid('location') && isFormControlTouched('location')
+      "
+    >
+      <small
+        class="text-danger"
+        *ngIf="isFormControlError('location', 'required')"
+        >Location is required.</small
+      >
+    </div>
+    <div class="custom-dropdown">
+      <select
+        formControlName="location"
+        class="form-control mb-3 dropdown-with-icon"
+        [class.valid]="isFormControlValid('location')"
+        [class.invalid]="isFormControlInvalid('location')"
+      >
+        <option value="">Location</option>
+        <option *ngFor="let country of locationData" [value]="country.text">
+          {{ country.text }}
+        </option>
+      </select>
+    </div>
+
+    <div class="custom-dropdown">
+      <select
+        formControlName="languageSkills"
+        class="form-control mb-3 dropdown-with-icon"
+      >
+        <option value="">Language</option>
+        <option value="Arabic">Arabic</option>
+        <option value="English">English</option>
+        <!-- Add more options as needed -->
+      </select>
+    </div>
+    <!-- Job Purpose Text Area -->
+    <label class="form-label mb-1" style="font-weight: bold; color: black"
+      >Job Purpose</label
+    >
+
+    <div
+      *ngIf="
+        isFormControlInvalid('jobPurpose') && isFormControlTouched('jobPurpose')
+      "
+    >
+      <small
+        class="text-danger"
+        *ngIf="isFormControlError('jobPurpose', 'required')"
+        >Job Purpose is required.</small
+      >
+    </div>
+    <textarea
+      formControlName="jobPurpose"
+      class="form-control mb-3"
+      [class.valid]="isFormControlValid('jobPurpose')"
+      [class.invalid]="isFormControlInvalid('jobPurpose')"
+    ></textarea>
+
+    <!-- Bullet Points -->
+    <label class="form-label mb-1" style="font-weight: bold; color: black"
+      >Policies and Processes
+    </label>
+    <textarea
+      formControlName="policiesProcesses"
+      placeholder="Policies and Processes"
+      class="form-control mb-3 bullet-textarea"
+      (keydown)="
+        handleTextareaKeyDown($event, policiesProcessesArray, policiesProcesses)
+      "
+      (input)="handleTextareaInput(policiesProcessesArray, policiesProcesses)"
+      #policiesProcesses
+    ></textarea>
+    <label class="form-label mb-1" style="font-weight: bold; color: black"
+      >Role and Responsibilities
+    </label>
+
+    <textarea
+      formControlName="roleResponsibilities"
+      placeholder="Role and Responsibilities"
+      class="form-control mb-3 bullet-textarea"
+      (keydown)="
+        handleTextareaKeyDown(
+          $event,
+          roleResponsibilitiesArray,
+          roleResponsibilities
+        )
+      "
+      (input)="
+        handleTextareaInput(roleResponsibilitiesArray, roleResponsibilities)
+      "
+      #roleResponsibilities
+    ></textarea>
+
+    <!-- Qualification Bullet Points -->
+    <label class="form-label mb-1" style="font-weight: bold; color: black"
+      >Qualification</label
+    >
+
+    <textarea
+      formControlName="qualification"
+      placeholder="Qualification"
+      class="form-control mb-3 bullet-textarea"
+      (keydown)="
+        handleTextareaKeyDown($event, qualificationArray, qualification)
+      "
+      (input)="handleTextareaInput(qualificationArray, qualification)"
+      #qualification
+    ></textarea>
+
+    <label class="form-label mb-1" style="font-weight: bold; color: black"
+      >Work Experience</label
+    >
+
+    <textarea
+      formControlName="workExperience"
+      placeholder="Work Experience"
+      class="form-control mb-3 bullet-textarea"
+      (keydown)="
+        handleTextareaKeyDown($event, workExperienceArray, workExperience)
+      "
+      (input)="handleTextareaInput(workExperienceArray, workExperience)"
+      #workExperience
+    ></textarea>
+
+    <label class="form-label mb-1" style="font-weight: bold; color: black"
+      >Behavioral Competencies</label
+    >
+
+    <textarea
+      formControlName="behavioralCompetencies"
+      placeholder="Behavioral Competencies"
+      class="form-control mb-3 bullet-textarea"
+      (keydown)="
+        handleTextareaKeyDown(
+          $event,
+          behavioralCompetenciesArray,
+          behavioralCompetencies
+        )
+      "
+      (input)="
+        handleTextareaInput(behavioralCompetenciesArray, behavioralCompetencies)
+      "
+      #behavioralCompetencies
+    ></textarea>
+    <div class="field-group">
+      <div class="field-group-item">
+        <label for="reports">Internal Report</label>
+
+        <input
+          type="text"
+          id="reprorts"
+          formControlName="reports"
+          class="form-control"
+        />
+        <label for="exreports">External Report</label>
+
+        <input
+          type="text"
+          id="exreports"
+          formControlName="exreports"
+          class="form-control"
+        />
+      </div>
+    </div>
+
+    <div class="button-container">
+      <button type="button" class="btn btn-success" (click)="postJob()">
+        Add Job
+      </button>
+
+      <div class="spacer"></div>
+      <button
+        type="button"
+        class="btn btn-secondary back-button"
+        (click)="navigateToJobComponent()"
+      >
+        Back to Job List
+      </button>
+    </div>
+  </form>
+</div>
